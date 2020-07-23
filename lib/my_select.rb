@@ -1,3 +1,5 @@
 def my_select(collection)
- # your code here!
+  updated_collection = []
+  collection.each { |i| updated_collection << i if yield(i) }
+  updated_collection
 end
